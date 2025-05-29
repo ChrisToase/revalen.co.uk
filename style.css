@@ -1,3 +1,4 @@
+/* ===== Base Styles ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,6 +6,7 @@ body {
   color: #111;
 }
 
+/* ===== Hero Section ===== */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -27,37 +29,35 @@ body {
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
+
 .inline-logo {
   height: 40px;
   width: auto;
   margin-bottom: 1rem;
 }
+
 .hero-image img {
   width: 100%;
   max-width: 500px;
   border-radius: 12px;
 }
 
-.buttons .btn {
+/* ===== Button Styles ===== */
+.btn {
   text-decoration: none;
-  border: 2px solid #3f4d5d;
   padding: 0.6rem 1.2rem;
   margin-right: 1rem;
   border-radius: 6px;
   font-weight: bold;
-  background-color: #3f4d5d;
-  color: #fff;
   transition: 0.3s;
+  display: inline-block;
+  border: 2px solid;
 }
 
-.buttons .btn:hover {
-  background-color: #2e3a45;
-  border-color: #2e3a45;
-}
 .btn.primary {
   background-color: #3f4d5d;
   color: #fff;
-  border: 2px solid #3f4d5d;
+  border-color: #3f4d5d;
 }
 
 .btn.primary:hover {
@@ -68,12 +68,14 @@ body {
 .btn.secondary {
   background-color: #fff;
   color: #3f4d5d;
-  border: 2px solid #3f4d5d;
+  border-color: #3f4d5d;
 }
 
 .btn.secondary:hover {
   background-color: #f2f2f2;
 }
+
+/* ===== Cards Section ===== */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +89,7 @@ body {
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   width: 45%;
   min-width: 350px;
   display: flex;
@@ -100,7 +102,7 @@ body {
   margin: 0 auto 1rem auto;
   width: auto;
   max-width: 100%;
-  max-height: 150px;
+  max-height: 300px; /* doubled from 150px */
   object-fit: contain;
   border-radius: 8px;
 }
@@ -125,9 +127,4 @@ body {
 .card .btn.small:hover {
   background-color: #2e3a45;
   border-color: #2e3a45;
-}
-
-.logo {
-  height: 50px;
-  width: auto;
 }
