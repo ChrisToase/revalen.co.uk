@@ -1,1 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revalen Intelligence</title>
+  <style>
+    :root {
+      --bg: #f4f4f6;
+      --text: #1c1c1e;
+      --primary: #1e2a44;
+      --secondary: #3b5d68;
+      --highlight: #cfeae1;
+      --max-width: 60rem;
+      --gutter: 2rem;
+      --footer-height: 40rem; /* adjust to fully hide CTA + logo + footer */ /* approximate total footer-zone height */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      padding: 1rem var(--gutter);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header a.logo-link {
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 5rem;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      padding: 0.5rem 1.2rem;
+      border: 2px solid var(--primary);
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    nav a.filled {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    nav a.outlined {
+      background-color: white;
+      color: var(--primary);
+    }
+
+    nav a:hover {
+      background-color: var(--secondary);
+      color: white;
+      border-color: var(--secondary);
+    }
+
+    .main-content {
+      position: relative;
+      z-index: 2;
+      margin-bottom: var(--footer-height);
+      background-color: var(--bg);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem var(--gutter);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      max-width: 40rem;
+      margin: 0 auto;
+      color: var(--primary);
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 4rem var(--gutter);
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: #ffffff;
+    }
+
+    .section-text {
+      flex: 1 1 300px;
+    }
+
+    .section-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .section-text p {
+      font-size: 1.05rem;
+    }
+
+    .section-image {
+      flex: 1 1 300px;
+    }
+
+    .section-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+
+    /* Footer zone hidden behind main-content */
+    .footer-zone {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      background: white;
+      transform: translateY(100%);
+      transition: transform 0.6s ease-out;
+    }
+
+    body.reveal-footer .footer-zone {
+      transform: translateY(0%);
+    }
+
+    .cta-section {
+      padding: 5rem var(--gutter);
+      text-align: center;
+      background-color: var(--highlight);
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: var(--primary);
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #0f1a2f;
+    }
+
+    .bottom-logo {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0 2rem;
+    }
+
+    .bottom-logo img {
+      height: 10rem;
+      width: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      background: white;
+    }
+
+    #footer-trigger {
+      position: absolute;
+      bottom: var(--footer-height);
+      width: 100%;
+      height: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <a href="#top" class="logo-link">
+      <img src="revalen_intelligence.png" alt="Revalen Intelligence Logo">
+    </a>
+    <nav>
+      <a href="#about" class="filled">About</a>
+      <a href="#expertise" class="outlined">Expertise</a>
+      <a href="#services" class="outlined">Services</a>
+      <a href="#contact" class="filled">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <section class="hero">
+      <h1>Trusted Security Guidance from Elite Professionals</h1>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-text">
+        <h2>Why Revalen</h2>
+        <p>We specialize in safeguarding lives, assets, and reputations. Our team combines special operations background with ethical intelligence practices to protect what matters most.</p>
+      </div>
+      <div class="section-image">
+        <img src="https://placehold.co/600x400?text=Mission+Ready" alt="Mission Ready">
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="section-text">
+        <h2>Discreet Global Operations</h2>
+        <p>From high-net-worth individuals to executive teams, we provide confidential advisory services and operational support in complex environments around the world.</p>
+      </div>
+      <div class="section-image">
+        <img src="https://placehold.co/600x400?text=Global+Reach" alt="Global Expertise">
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-text">
+        <h2>Protective Intelligence</h2>
+        <p>We fuse open-source intelligence, risk indicators, and on-the-ground assets to proactively secure physical and digital environments for clients under threat.</p>
+      </div>
+      <div class="section-image">
+        <img src="https://placehold.co/600x400?text=Proactive+Security" alt="Protective Intelligence">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-text">
+        <h2>Confidential Consultation</h2>
+        <p>Each engagement begins with a confidential, no-obligation consultation. We listen carefully and offer tailored support plans grounded in years of operational experience.</p>
+      </div>
+      <div class="section-image">
+        <img src="https://placehold.co/600x400?text=Confidential+Consult" alt="Confidential Consult">
+      </div>
+    </section>
+
+    <!-- Trigger element to reveal footer-zone -->
+    <div id="footer-trigger"></div>
+  </div>
+
+  <div class="footer-zone">
+    <section class="cta-section" id="contact">
+      <h2>Start a Secure Conversation</h2>
+      <a href="#chat" class="cta-button">Chat Confidentially</a>
+    </section>
+
+    <div class="bottom-logo">
+      <img src="revalen_intelligence.png" alt="Revalen Logo Large">
+    </div>
+
+    <footer>
+      © Revalen Intelligence · All rights reserved · Privacy-first engagement
+    </footer>
+  </div>
+
+  <script src="//code.tidio.co/YOUR_UNIQUE_ID.js" async></script>
+  <script>
+    const trigger = document.getElementById('footer-trigger');
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        document.body.classList.add('reveal-footer');
+      }
+    }, { threshold: 1.0 });
+    observer.observe(trigger);
+  </script>
+</body>
+</html>
 
