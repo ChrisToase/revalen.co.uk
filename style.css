@@ -27,7 +27,11 @@ body {
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
-
+.inline-logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 1rem;
+}
 .hero-image img {
   width: 100%;
   max-width: 500px;
@@ -50,14 +54,33 @@ body {
   background-color: #2e3a45;
   border-color: #2e3a45;
 }
+.btn.primary {
+  background-color: #3f4d5d;
+  color: #fff;
+  border: 2px solid #3f4d5d;
+}
 
+.btn.primary:hover {
+  background-color: #2e3a45;
+  border-color: #2e3a45;
+}
+
+.btn.secondary {
+  background-color: #fff;
+  color: #3f4d5d;
+  border: 2px solid #3f4d5d;
+}
+
+.btn.secondary:hover {
+  background-color: #f2f2f2;
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   padding: 3rem;
   justify-content: center;
-  background-color: #dcdfe3;
+  background-color: #4a5378;
 }
 
 .card {
@@ -73,11 +96,13 @@ body {
 }
 
 .card img {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
   border-radius: 8px;
-  margin-bottom: 1rem;
 }
 
 .card h3 {
@@ -100,10 +125,6 @@ body {
 .card .btn.small:hover {
   background-color: #2e3a45;
   border-color: #2e3a45;
-}
-.site-header {
-  background-color: #fff;
-  padding: 1.5rem 3rem 0 3rem;
 }
 
 .logo {
