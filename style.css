@@ -127,3 +127,9 @@ body {
   background-color: #2e3a45;
   border-color: #2e3a45;
 }
+.card-logo {
+  height: 100px;
+  width: auto;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
