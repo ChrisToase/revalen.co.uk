@@ -31,7 +31,7 @@ body {
 }
 
 .inline-logo {
-  height: 250px !important;
+  height: 200px !important;
   width: auto !important;
   margin-bottom: 1rem;
 }
@@ -136,13 +136,13 @@ body {
 }
 
 .card-logo {
-  height: 60px;
+  height: 80px;
   width: auto;
   align-self: flex-end;
 }
 
 .card-main-img {
-  height: 200px;
+  height: 300px;
   width: auto;
   object-fit: contain;
   border-radius: 8px;
