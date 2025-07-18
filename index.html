@@ -1,71 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Revalen</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revalen Group</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .header-color {
+      color: #3A506B;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800 font-sans">
 
-  <!-- Hero section -->
-  <header class="hero">
-    <div class="hero-text">
-      <img src="images/logogroup.png" alt="Revalen Group Logo" class="inline-logo" />
-      <h1>Intelligence and Special Projects</h1>
-      <p>
-        A fusion of modern commercial intelligence capabilities with tech startup innovation. 
-      <p>  
-        We deliver actionable insights and solutions to governments, NGOs and businesses operating in complex and high-risk environments.
-      </p>
-        Our Special Projects Task Forces are called upon when others can’t—or won’t—operate. We thrive where traditional tools and providers fail.
-      <p>
-      <div class="buttons">
-        <a href="#" class="btn primary">Our services</a>
-        <a href="#" class="btn secondary">Contact us</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <img src="images/command-centre.jpg" alt="Command centre" />
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+      <a href="index.html">
+        <img src="images/logogroup.png" alt="Revalen Group Logo" class="h-20 md:h-24">
+      </a>
+      <nav class="space-x-4">
+        <a href="#intelligence" class="text-blue-800 hover:underline">Intelligence</a>
+        <a href="#tech" class="text-blue-800 hover:underline">Tech</a>
+        <a href="#humanitarian" class="text-blue-800 hover:underline">Humanitarian</a>
+        <a href="#services" class="text-blue-800 hover:underline">Group Services</a>
+        <a href="#contact" class="text-blue-800 hover:underline">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Cards section -->
-  <section class="cards">
-  <div class="card">
-  <div class="card-top">
-    <a href="intelligence.html">
-      <img src="images/logo-intelligence.png" alt="Revalen Intelligence Logo" class="card-logo" />
-    </a>
-    <img src="images/intelligence.jpg" alt="Revalen Intelligence" class="card-main-img" />
-  </div>
-  <h3>Intelligence and Investigations</h3>
-  <p>
-    Advanced, agile commercial intelligence, delivering actionable insights for organisations.<br><br>
-    Our team delivers clarity and context to support critical decisions.
-  </p>
-  <a href="intelligence.html" class="btn small">Discover more</a>
-</div>
+  <!-- Main Cards -->
+  <main class="max-w-7xl mx-auto p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-   <div class="card">
-  <div class="card-top">
-    <a href="tech.html">
-      <img src="images/logo-tech.png" alt="Revalen Tech Logo" class="card-logo" />
-    </a>
-    <img src="images/technology.jpg" alt="Revalen Tech" class="card-main-img" />
-  </div>
-  <h3>Agile Innovation</h3>
-  <p>
-    Imagine if your department had its own highly capable tech start-up.<br><br>
-    We develop and deploy secure communications, autonomous systems, and custom-built technology to help clients operate safely and effectively in sensitive environments.
-  </p>
-  <a href="tech.html" class="btn small">Explore</a>
-</div>
-  </section>
+      <!-- Intelligence Card -->
+      <a id="intelligence" href="/intelligence.html" class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="images/intelligence.jpg" alt="Revalen Intelligence" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold header-color">Revalen Intelligence</h2>
+          <p class="mt-2 text-gray-700">Operational support, investigation, and advisory services in complex environments.</p>
+        </div>
+      </a>
+
+      <!-- Tech Card -->
+      <a id="tech" href="/tech.html" class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="images/tech.jpg" alt="Revalen Tech" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold header-color">Revalen Tech</h2>
+          <p class="mt-2 text-gray-700">Advanced hardware, secure communications, and drone systems for field deployment.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Humanitarian Aid -->
+    <section id="humanitarian" class="mt-16">
+      <h2 class="text-2xl font-bold header-color mb-4">Humanitarian Projects</h2>
+      <p class="text-gray-700">We support people in crisis by providing essential resources and protecting their rights. Our projects promote justice and uphold the right to a dignified life.</p>
+    </section>
+
+    <!-- Group Services -->
+    <section id="services" class="mt-16">
+      <h2 class="text-2xl font-bold header-color mb-4">Revalen Group Services</h2>
+      <p class="text-gray-700 mb-4">Revalen Group provides core infrastructure and business support to all divisions.</p>
+      <ul class="list-disc ml-6 text-gray-700">
+        <li>Legal & Regulatory Compliance</li>
+        <li>Business Operations & Finance</li>
+        <li>Recruitment & Staffing</li>
+        <li>Contract & Risk Management</li>
+        <li>Admin & Commercial Services</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mt-16">
+      <h2 class="text-2xl font-bold header-color mb-4">Contact Us</h2>
+      <p class="text-gray-700 mb-4">Want to collaborate or learn more? Reach out directly or use the embedded chat assistant.</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full p-3 border border-gray-300 rounded">
+        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded">
+        <textarea placeholder="Message" class="w-full p-3 border border-gray-300 rounded" rows="5"></textarea>
+        <button type="submit" class="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800">Send</button>
+      </form>
+      <!-- Placeholder for AI Chat -->
+      <div class="mt-8">
+        <p class="text-gray-500 text-sm">AI chat assistant coming soon...</p>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
-  </section>
-</body>
-</html>
-
