@@ -29,9 +29,21 @@
     </div>
   </header>
 
-  <!-- Main Cards -->
+  <!-- Main Content -->
   <main class="max-w-7xl mx-auto p-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Overview -->
+    <section class="mb-16">
+      <h1 class="text-3xl font-bold header-color mb-4">A fusion of modern commercial intelligence capabilities with tech startup innovation.</h1>
+      <h2 class="text-xl font-semibold header-color mt-6 mb-2">What we do:</h2>
+      <p class="text-gray-700">We deliver actionable insights and solutions to governments, NGOs, and businesses operating in complex and high-risk environments.</p>
+      <p class="text-gray-700 mt-2">This includes secure communications, threat assessments, war crimes investigations, targeting, asset recovery, media monitoring, and technical innovation.</p>
+      <h2 class="text-xl font-semibold header-color mt-6 mb-2">What makes us effective:</h2>
+      <p class="text-gray-700">Our Special Projects Task Forces are called upon when others can’t—or won’t—operate. We thrive where traditional tools and providers fail.</p>
+    </section>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- Intelligence Card -->
       <a id="intelligence" href="intelligence.html" class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
@@ -50,13 +62,16 @@
           <p class="mt-2 text-gray-700">Advanced hardware, secure communications, and drone systems for field deployment.</p>
         </div>
       </a>
-    </div>
 
-    <!-- Humanitarian Projects -->
-    <section id="humanitarian" class="mt-16">
-      <h2 class="text-2xl font-bold header-color mb-4">Humanitarian Projects</h2>
-      <p class="text-gray-700">We support people in crisis by providing essential resources and protecting their rights. Our projects promote justice and uphold the right to a dignified life.</p>
-    </section>
+      <!-- Humanitarian Projects Card -->
+      <a id="humanitarian" href="#humanitarian" class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="images/humanitarian.png" alt="Humanitarian Projects" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold header-color">Humanitarian Projects</h2>
+          <p class="mt-2 text-gray-700">We support people in crisis by providing essential resources and protecting their rights. Our projects promote justice and uphold the right to a dignified life.</p>
+        </div>
+      </a>
+    </div>
 
     <!-- Group Services -->
     <section id="services" class="mt-16">
@@ -71,11 +86,18 @@
       </ul>
     </section>
 
-    <!-- Optional Replacement for Contact Section -->
+    <!-- Contact Section -->
     <section id="contact" class="mt-16">
       <h2 class="text-2xl font-bold header-color mb-4">Contact Us</h2>
-      <p class="text-gray-700">You can now reach us directly using the chat assistant in the bottom-right corner.</p>
+      <p class="text-gray-700 mb-4">Want to collaborate or learn more? Reach out directly or use the embedded chat assistant.</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full p-3 border border-gray-300 rounded">
+        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded">
+        <textarea placeholder="Message" class="w-full p-3 border border-gray-300 rounded" rows="5"></textarea>
+        <button type="submit" class="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800">Send</button>
+      </form>
     </section>
+
   </main>
 
   <!-- Tidio Chat Integration -->
