@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
+  <title>Page Title | Revalen</title>
+  <meta name="description" content="Revalen delivers clarity, capability, and practical solutions for organisations operating in complex environments.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <header class="header">
     <div class="container nav">
-      <a href="index.html" class="nav-logo">Revalen</a>
+      <a href="index.html" class="nav-logo" aria-label="Revalen home">
+        <img src="assets/images/brand/revalen-logo.svg" alt="Revalen" class="logo-image">
+      </a>
 
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="intelligence.html">Intelligence</a>
         <a href="tech.html">Tech</a>
         <a href="resources.html">Resources</a>
@@ -24,6 +26,7 @@
   </header>
 
   <main class="container">
+    <!-- Page content goes here -->
   </main>
 
   <footer class="footer">
@@ -31,27 +34,34 @@
 
       <div>
         <h3>Revalen</h3>
-        <p>Delivering clarity and capability in complex environments.</p>
+        <p>Practical intelligence, technology, and support for organisations operating in complex, high-risk, or high-stakes environments.</p>
       </div>
 
       <div>
-        <h3>Navigation</h3>
-        <p><a href="intelligence.html">Intelligence</a></p>
-        <p><a href="tech.html">Tech</a></p>
-        <p><a href="resources.html">Resources</a></p>
+        <h3>Quick Links</h3>
         <p><a href="about.html">About</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="values.html">Values &amp; Standards</a></p>
+        <p><a href="legal.html">Legal</a></p>
       </div>
 
       <div>
-        <h3>More</h3>
-        <p><a href="values.html">Values & Standards</a></p>
-        <p><a href="contact.html">Contact</a></p>
+        <h3>Company</h3>
+        <p>Revalen Group Ltd</p>
+        <p class="small-text">Registered in the United Kingdom.</p>
+        <p class="small-text">© 2026 Revalen Group Ltd. All rights reserved.</p>
       </div>
 
     </div>
   </footer>
 
   <script src="assets/js/site.js"></script>
+
+  <!--
+    Tidio should not be loaded here by default if you intend to avoid
+    non-essential cookies before consent. Add it later once you decide
+    whether to use a consent banner or conditional loading.
+  -->
 
 </body>
 </html>
