@@ -12,6 +12,7 @@
   --color-border: #d9d9d9;
 
   --container-width: 1280px;
+  --footer-width: 1520px;
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -67,6 +68,11 @@ img {
 /* ===== LAYOUT ===== */
 .container {
   width: min(100% - 3rem, var(--container-width));
+  margin-inline: auto;
+}
+
+.footer-container {
+  width: min(100% - 3rem, var(--footer-width));
   margin-inline: auto;
 }
 
@@ -213,9 +219,9 @@ main.container {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(320px, 1.45fr) minmax(250px, 0.95fr) minmax(290px, 1.05fr);
   align-items: start;
-  gap: clamp(2rem, 4vw, 5rem);
+  gap: clamp(2rem, 5vw, 7rem);
 }
 
 .footer-block {
@@ -223,7 +229,13 @@ main.container {
 }
 
 .footer-brand {
-  max-width: 40rem;
+  max-width: 42rem;
+}
+
+.footer-company {
+  justify-self: end;
+  text-align: left;
+  max-width: 24rem;
 }
 
 .footer-links {
@@ -231,6 +243,7 @@ main.container {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: var(--space-2) var(--space-4);
+  max-width: 24rem;
 }
 
 .footer-links a {
@@ -331,13 +344,19 @@ main.container {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: var(--space-6);
   }
 
   .footer-brand {
     grid-column: 1 / -1;
+    max-width: none;
+  }
+
+  .footer-company {
+    justify-self: start;
     max-width: none;
   }
 }
@@ -373,11 +392,21 @@ main.container {
     height: 54px;
     max-width: 220px;
   }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .footer-company {
+    justify-self: start;
+  }
 }
 
 @media (max-width: 640px) {
-  .container {
-    width: min(100% - 1.5rem, var(--container-width));
+  .container,
+  .footer-container {
+    width: min(100% - 1.5rem, 100%);
   }
 
   main.container {
@@ -390,14 +419,10 @@ main.container {
     padding: var(--space-6) 0;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-5);
-  }
-
   .footer-links {
     flex-direction: column;
     gap: var(--space-2);
+    max-width: none;
   }
 
   .consent-banner {
