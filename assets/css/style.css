@@ -125,7 +125,7 @@ a {
 }
 
 .section-muted {
-  background: rgba(208, 204, 190, 0.18);
+  background: #27312d;
 }
 
 .section-heading {
@@ -230,9 +230,10 @@ main {
 }
 
 .intro-subhead {
-  max-width: 40rem;
-  font-size: 1.15rem;
-  color: var(--color-primary);
+  max-width: 44rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--color-text-muted);
   margin-bottom: 0;
 }
 
@@ -241,6 +242,11 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-6);
   max-width: 1080px;
+  
+  .two-column-text p {
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
 }
 
 .values-list p:last-child {
@@ -265,10 +271,10 @@ main {
   display: block;
   text-decoration: none;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-card);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -286,12 +292,12 @@ main {
 }
 
 .feature-card__title {
-  font-size: 0.95rem;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-secondary);
-  margin-bottom: 0;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
 }
 
 .feature-card h3 {
@@ -299,6 +305,10 @@ main {
   max-width: 18ch;
 }
 
+.feature-card h3 {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  line-height: 1.35;
+}
 .feature-card-horizontal {
   max-width: 760px;
 }
