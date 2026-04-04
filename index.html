@@ -12,10 +12,16 @@
   <header class="header">
     <div class="container nav">
       <a href="index.html" class="nav-logo" aria-label="Revalen home">
-        <img src="assets/images/brand/revalen-logo.svg" alt="Revalen" class="logo-image">
+        <img src="assets/images/brand/revalen-logo-dark.svg" alt="Revalen" class="logo-image">
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
         <a href="intelligence.html">Intelligence</a>
         <a href="tech.html">Tech</a>
         <a href="resources.html">Resources</a>
@@ -26,17 +32,17 @@
   </header>
 
   <main class="container">
+    <!-- Homepage content comes next -->
   </main>
 
   <footer class="footer">
     <div class="container footer-grid">
-
-      <div>
+      <div class="footer-block footer-brand">
         <h3>Revalen</h3>
         <p>Practical intelligence, technology, and support for organisations operating in complex, high-risk, or high-stakes environments.</p>
       </div>
 
-      <div>
+      <div class="footer-block">
         <h3>Quick Links</h3>
         <div class="footer-links">
           <a href="about.html">About</a>
@@ -46,17 +52,32 @@
         </div>
       </div>
 
-      <div>
+      <div class="footer-block">
         <h3>Company</h3>
         <p>Revalen Group Ltd</p>
         <p class="small-text">Registered in the United Kingdom</p>
         <p class="small-text">Company No. 16417753</p>
         <p class="small-text">© 2026 Revalen Group Ltd. All rights reserved.</p>
       </div>
-
     </div>
   </footer>
 
+  <div class="consent-banner" id="consent-banner" hidden>
+    <div class="consent-banner__content">
+      <p>
+        We can enable live chat using Tidio. That feature may use cookies or similar browser storage. You can accept live chat or continue without it.
+      </p>
+      <div class="consent-banner__actions">
+        <button type="button" class="btn btn-primary" id="accept-chat">Accept live chat</button>
+        <button type="button" class="btn btn-secondary" id="reject-chat">Continue without chat</button>
+        <a href="legal.html">Legal</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.REVALEN_TIDIO_SRC = "//code.tidio.co/i71qzd6ga36gmovqwbtwrylu40zktdeu.js";
+  </script>
   <script src="assets/js/site.js"></script>
 
 </body>
