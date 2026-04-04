@@ -267,15 +267,29 @@ main {
   grid-template-columns: 1fr;
 }
 
+.feature-card::before {
+  content: "";
+  position: absolute;
+  left: var(--space-6);
+  top: var(--space-6);
+  width: 4px;
+  height: 3.2rem;
+  border-radius: 999px;
+  background: #8f978f;
+}
+
 .feature-card {
+  position: relative;
   display: block;
   text-decoration: none;
   background: var(--color-surface);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  box-shadow: var(--shadow-card);
+  padding-left: calc(var(--space-6) + 1rem);
+  box-shadow: var(--shadow-soft);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
 }
 
 .feature-card:hover {
@@ -287,7 +301,7 @@ main {
 .feature-card__content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: 0;
   min-height: 100%;
 }
 
@@ -312,6 +326,13 @@ main {
 .feature-card-horizontal {
   max-width: 760px;
 }
+
+.feature-card .text-link {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  font-size: 1rem;
+}
+
 .resource-subsections {
   list-style: none;
   padding: 0;
