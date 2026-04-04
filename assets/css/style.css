@@ -336,16 +336,27 @@ main {
 .resource-subsections {
   list-style: none;
   padding: 0;
-  margin: var(--space-2) 0 0 0;
+  margin: var(--space-3) 0 0 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-2) var(--space-4);
+  gap: var(--space-2) var(--space-5);
 }
 
 .resource-subsections li {
-  font-size: 1rem;
+  margin: 0;
+}
+
+.resource-subsections a {
+  display: inline-block;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.resource-subsections a:hover {
+  color: var(--color-accent);
 }
 .section-muted .card-grid {
   gap: var(--space-6);
