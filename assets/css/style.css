@@ -768,3 +768,21 @@ main {
     padding: var(--space-4);
   }
 }
+
+/* ===== INTELLIGENCE PAGE COLOUR REFINEMENT ===== */
+
+.intelligence-overview strong {
+  color: #839186;
+}
+
+.narrative-item h3 {
+  color: #839186;
+}
+
+.cta-panel__content p strong {
+  color: #839186;
+}
+
+.feature-card::before {
+  background: #839186;
+}
