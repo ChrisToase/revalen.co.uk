@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Revalen | Home</title>
-  <meta name="description" content="Revalen delivers practical intelligence, technology, and support for organisations operating in complex environments.">
+  <title>Revalen Intelligence | Revalen</title>
+  <meta name="description" content="Government-grade intelligence and investigations, providing actionable insights in complex and hostile environments.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -15,7 +15,13 @@
         <img src="assets/images/brand/revalen-logo.svg" alt="Revalen" class="logo-image">
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
         <a href="intelligence.html">Intelligence</a>
         <a href="tech.html">Tech</a>
         <a href="resources.html">Resources</a>
@@ -25,18 +31,125 @@
     </div>
   </header>
 
-  <main class="container">
+  <main>
+    <section class="home-intro page-intro">
+      <div class="container">
+        <div class="intro-block">
+          <h1>Finding clarity and insight amidst the fog and the noise</h1>
+          <p class="intro-subhead">Government-grade intelligence and investigations, providing actionable insights in complex and hostile environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block section-divider">
+      <div class="container">
+        <div class="section-heading">
+          <h2>What Revalen Intelligence does</h2>
+        </div>
+
+        <div class="two-column-text intelligence-overview">
+          <div>
+            <p>
+              Our primary focus is promoting justice, security and equality, supporting governments and NGOs with three core services:
+            </p>
+          </div>
+
+          <div>
+            <div class="service-lines">
+              <p><strong>Special Investigations</strong></p>
+              <p><strong>Capacity Development and Leadership Consultation</strong></p>
+              <p><strong>Strategic and Operational Planning</strong></p>
+            </div>
+            <p class="overview-note">Learn more about these services in the links below.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block section-muted">
+      <div class="container">
+        <div class="card-grid card-grid-three">
+          <a href="special-investigations.html" class="feature-card">
+            <div class="feature-card__content">
+              <p class="feature-card__title">Special Investigations</p>
+              <h3>Working with prosecutors, journalists and NGOs who are standing up to atrocities, inequality and oppression.</h3>
+              <p class="card-supporting-text">Providing critical insights even in the most challenging environments.</p>
+              <span class="text-link">Explore Special Investigations</span>
+            </div>
+          </a>
+
+          <a href="legendary-leaders.html" class="feature-card">
+            <div class="feature-card__content">
+              <p class="feature-card__title">Legendary Leaders</p>
+              <h3>Capacity Development for intelligence and investigation teams.</h3>
+              <p class="card-supporting-text">Turning heroes into Legendary Leaders by creating teams that are secure, consistent, high-performing, and sustainable.</p>
+              <span class="text-link">Explore Legendary Leaders</span>
+            </div>
+          </a>
+
+          <a href="planning-delivery.html" class="feature-card">
+            <div class="feature-card__content">
+              <p class="feature-card__title">Planning and Delivery</p>
+              <h3>Providing decision support and situational awareness to governments and NGOs embarking on complex operations or strategic projects.</h3>
+              <span class="text-link">Explore Planning and Delivery</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Background and credibility</h2>
+        </div>
+
+        <div class="narrative-block">
+          <div class="narrative-item">
+            <h3>Eliminating the noise</h3>
+            <p>
+              Cutting through the misinformation, propaganda and AI-generated content, using advanced technology, data engineering, and sometimes just a lot of hard work and focus.
+            </p>
+          </div>
+
+          <div class="narrative-item">
+            <h3>Illuminating the dark</h3>
+            <p>
+              Where circumstances and injustices are under-reported due to censorship, persecution, or limited infrastructure, we work across multiple sources and disciplines to represent those issues as clearly and accurately as possible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block section-cta">
+      <div class="container">
+        <div class="cta-panel cta-panel-stacked">
+          <div class="cta-panel__content">
+            <h2>Get in touch</h2>
+            <p>Book a call to discuss your project.</p>
+            <p>Have a question? Complete the form.</p>
+          </div>
+
+          <div class="cta-panel__actions cta-panel__actions-grid">
+            <a href="contact.html" class="btn btn-primary">Book a call</a>
+            <a href="contact.html" class="btn btn-secondary">Complete the form</a>
+            <a href="legendary-leaders.html" class="btn btn-secondary">Legendary Leaders survey</a>
+            <a href="contact.html" class="btn btn-secondary">Sanctions resilience survey</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-grid">
-
-      <div>
+    <div class="footer-container footer-grid">
+      <div class="footer-block footer-brand">
         <h3>Revalen</h3>
         <p>Practical intelligence, technology, and support for organisations operating in complex, high-risk, or high-stakes environments.</p>
       </div>
 
-      <div>
+      <div class="footer-block">
         <h3>Quick Links</h3>
         <div class="footer-links">
           <a href="about.html">About</a>
@@ -46,17 +159,32 @@
         </div>
       </div>
 
-      <div>
+      <div class="footer-block footer-company">
         <h3>Company</h3>
         <p>Revalen Group Ltd</p>
         <p class="small-text">Registered in the United Kingdom</p>
         <p class="small-text">Company No. 16417753</p>
         <p class="small-text">© 2026 Revalen Group Ltd. All rights reserved.</p>
       </div>
-
     </div>
   </footer>
 
+  <div class="consent-banner" id="consent-banner" hidden>
+    <div class="consent-banner__content">
+      <p>
+        We can enable live chat using Tidio. That feature may use cookies or similar browser storage. You can accept live chat or continue without it.
+      </p>
+      <div class="consent-banner__actions">
+        <button type="button" class="btn btn-primary" id="accept-chat">Accept live chat</button>
+        <button type="button" class="btn btn-secondary" id="reject-chat">Continue without chat</button>
+        <a href="legal.html">Legal</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.REVALEN_TIDIO_SRC = "//code.tidio.co/i71qzd6ga36gmovqwbtwrylu40zktdeu.js";
+  </script>
   <script src="assets/js/site.js"></script>
 
 </body>
