@@ -143,19 +143,42 @@
     <div class="cta-panel cta-panel-stacked">
 
       <div class="cta-panel__content">
-  <h2>Get in touch</h2>
-  <p>Book a call to discuss your project.</p>
-  <p>Have a question? Complete the form.</p>
-  <p>Are you a Legendary Leader? Take the survey to find out.</p>
-  <p>Is your organisation resilient to sanctions? Take the survey to find out.</p>
-</div>
+        <h2>Get in touch</h2>
+      </div>
 
-<div class="cta-panel__actions cta-panel__actions-grid">
-  <a href="contact.html" class="btn btn-primary">Book a call</a>
-  <a href="contact.html" class="btn btn-secondary">Complete the form</a>
-  <a href="legendary-leaders.html" class="btn btn-secondary">Legendary Leaders survey</a>
-  <a href="contact.html" class="btn btn-secondary">Sanctions resilience survey</a>
-</div>
+      <div class="cta-panel__actions cta-panel__actions-grid">
+
+        <!-- Book a call -->
+        <div class="cta-item">
+          <p>Book a call to discuss your project.</p>
+          <a href="contact.html" class="btn btn-primary">Book a call</a>
+        </div>
+
+        <!-- Contact form -->
+        <div class="cta-item">
+          <p>Have a question? Complete the form.</p>
+
+          <form class="contact-form">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="4" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+
+        <!-- Legendary Leaders -->
+        <div class="cta-item">
+          <p>Are you a Legendary Leader? Take the survey to find out.</p>
+          <a href="legendary-leaders.html" class="btn btn-secondary">Take the survey</a>
+        </div>
+
+        <!-- Sanctions -->
+        <div class="cta-item">
+          <p>Is your organisation resilient to sanctions? Take the survey to find out.</p>
+          <a href="contact.html" class="btn btn-secondary">Take the survey</a>
+        </div>
+
+      </div>
 
     </div>
 
