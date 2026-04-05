@@ -769,6 +769,40 @@ main {
   }
 }
 
+/* ===== CTA STRUCTURE REFINEMENT ===== */
+
+.cta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font: inherit;
+  background: var(--color-surface);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #839186;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
 /* ===== INTELLIGENCE PAGE COLOUR REFINEMENT ===== */
 
 .intelligence-overview strong {
