@@ -430,6 +430,11 @@ main {
   justify-content: flex-start;
 }
 
+.cta-note {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background: var(--color-primary);
