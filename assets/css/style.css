@@ -422,12 +422,14 @@ main {
   margin-bottom: 0;
 }
 
-.cta-panel__actions {
+.cta-panel__actions,
+.cta-panel__actions-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 3rem;
   row-gap: 2rem;
   align-items: start;
+  justify-content: stretch;
 }
 
 .cta-item {
@@ -451,7 +453,8 @@ main {
 }
 
 @media (max-width: 900px) {
-  .cta-panel__actions {
+  .cta-panel__actions,
+  .cta-panel__actions-grid {
     grid-template-columns: 1fr;
     column-gap: 0;
   }
