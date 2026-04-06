@@ -459,7 +459,10 @@ main {
   width: 100%;
   text-align: center;
 }
-
+.cta-item:nth-child(3),
+.cta-item:nth-child(4) {
+  margin-top: 1.5rem;
+}
 .cta-note {
   font-size: 0.9rem;
   color: var(--color-text-muted);
