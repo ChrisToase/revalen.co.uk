@@ -141,25 +141,37 @@
       </div>
     </section>
 
-    <section class="section-block section-cta">
-      <div class="container">
-        <div class="cta-panel">
-          <div class="cta-panel__content">
-            <h2>Get in touch</h2>
-            <p>
-              If you would like to discuss a special project, or ask questions about some of our other services, get in touch using the form below.
-            </p>
-            <p>
-              You can also book a call using the calendar link below.
-            </p>
-          </div>
-          <div class="cta-panel__actions">
-            <a href="contact.html" class="btn btn-primary">Contact Revalen</a>
-            <a href="contact.html" class="btn btn-secondary">Book a call</a>
-          </div>
-        </div>
+  <section class="section-block section-cta">
+  <div class="container">
+    <div class="cta-panel cta-panel-stacked">
+
+      <div class="cta-panel__content">
+        <h2>Get in touch</h2>
+        <p>
+          If you would like to discuss a project or ask a question, you can book a call or start a chat.
+        </p>
       </div>
-    </section>
+
+      <div class="cta-panel__actions cta-panel__actions-grid">
+
+        <div class="cta-item">
+          <p>Book a call to discuss your project.</p>
+          <a href="contact.html" class="btn btn-primary">Book a call</a>
+        </div>
+
+        <div class="cta-item">
+          <p>
+            Have a question? Start a chat.<br>
+            <span class="cta-note">Chat requires consent to enable.</span>
+          </p>
+          <button class="btn btn-primary" onclick="handleChatClick()">Start chat</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="footer">
