@@ -440,6 +440,7 @@ main {
 
 .cta-item p {
   margin-bottom: var(--space-3);
+  min-height: 4.5rem;
 }
 
 .cta-item .btn {
