@@ -155,22 +155,24 @@
         </div>
 
         <!-- Contact form -->
-        <p>
-  Have a question? Start a chat.<br>
-  <span class="cta-note">Chat requires consent to enable.</span>
-</p>
-<button class="btn btn-primary" onclick="handleChatClick()">Start chat</button>
+        <div class="cta-item">
+          <p>
+            Have a question? Start a chat.<br>
+            <span class="cta-note">Chat requires consent to enable.</span>
+          </p>
+          <button class="btn btn-primary" onclick="handleChatClick()">Start chat</button>
+        </div>
 
         <!-- Legendary Leaders -->
         <div class="cta-item">
           <p>Are you a Legendary Leader? Take the survey to find out.</p>
-          <a href="legendary-leaders.html" class="btn btn-secondary">Take the survey</a>
+          <a href="https://legendary-leaders.scoreapp.com" target="_blank" rel="noopener" class="btn btn-secondary">Take the survey</a>
         </div>
 
         <!-- Sanctions -->
         <div class="cta-item">
           <p>Is your organisation resilient to sanctions? Take the survey to find out.</p>
-          <a href="contact.html" class="btn btn-secondary">Take the survey</a>
+          <a href="https://surviving-sanctions.scoreapp.com" target="_blank" rel="noopener" class="btn btn-secondary">Take the survey</a>
         </div>
 
       </div>
@@ -208,6 +210,31 @@
     </div>
   </div>
 </footer>
+
+<div class="consent-banner" id="consent-banner" hidden>
+  <div class="consent-banner__content">
+
+    <p>
+      We can enable live chat so you can message us directly. This uses Tidio, which may store small pieces of information in your browser to make the chat work properly and allow us to respond.
+    </p>
+
+    <p class="consent-note">
+      You can enable chat or continue without it.
+    </p>
+
+    <div class="consent-banner__actions">
+      <button type="button" class="btn btn-primary" id="accept-chat">Enable chat</button>
+      <button type="button" class="btn btn-secondary" id="reject-chat">Continue without chat</button>
+      <a href="legal.html">Legal</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  window.REVALEN_TIDIO_SRC = "//code.tidio.co/i71qzd6ga36gmovqwbtwrylu40zktdeu.js";
+</script>
+<script src="assets/js/site.js"></script>
 
 </body>
 </html>
