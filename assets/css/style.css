@@ -294,7 +294,7 @@ main {
   width: 4px;
   height: 3.2rem;
   border-radius: 999px;
-  background: #8f978f;
+  background: #839186;
 }
 
 .feature-card__content {
@@ -452,13 +452,6 @@ main {
   color: var(--color-text-muted);
 }
 
-@media (max-width: 900px) {
-  .cta-panel__actions,
-  .cta-panel__actions-grid {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-  }
-}
 /* ===== FOOTER ===== */
 .footer {
   background: var(--color-primary);
@@ -604,6 +597,12 @@ main {
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .card-grid-three {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
   .nav {
     min-height: auto;
@@ -639,12 +638,19 @@ main {
   .two-column-text,
   .card-grid-two,
   .cta-panel,
-  .footer-grid {
+  .footer-grid,
+  .narrative-block {
     grid-template-columns: 1fr;
   }
 
   .cta-panel {
     align-items: start;
+  }
+
+  .cta-panel__actions,
+  .cta-panel__actions-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
   }
 
   .footer-grid > .footer-block:nth-child(2) {
@@ -685,7 +691,8 @@ main {
 
   .feature-card,
   .featured-article,
-  .cta-panel {
+  .cta-panel,
+  .narrative-item {
     padding: var(--space-4);
   }
 
@@ -769,69 +776,6 @@ main {
   align-items: start;
 }
 
-.cta-panel__actions-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, auto));
-  gap: var(--space-3);
-  justify-content: start;
-}
-
-@media (max-width: 1100px) {
-  .card-grid-three {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .narrative-block {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-panel__actions-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .narrative-item {
-    padding: var(--space-4);
-  }
-}
-
-/* ===== CTA STRUCTURE REFINEMENT ===== */
-
-.cta-item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  margin-top: var(--space-2);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.7rem 0.8rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
-  font: inherit;
-  background: var(--color-surface);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #839186;
-}
-
-.contact-form button {
-  align-self: flex-start;
-}
 /* ===== INTELLIGENCE PAGE COLOUR REFINEMENT ===== */
 
 .intelligence-overview strong {
@@ -844,8 +788,4 @@ main {
 
 .cta-panel__content p strong {
   color: #839186;
-}
-
-.feature-card::before {
-  background: #839186;
 }
