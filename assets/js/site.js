@@ -1,10 +1,22 @@
-function handleChatClick() {
-  const consentGiven = localStorage.getItem("revalen_chat_consent");
+function loadTidio() {
+  if (window.tidioChatApi) {
+    return;
+  }
 
-  if (consentGiven === "true") {
-    openTidio();
-  } else {
-    showConsentBanner();
+  if (document.querySelector('script[data-tidio="true"]')) {
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.src = window.REVALEN_TIDIO_SRC;
+  script.async = true;
+  script.setAttribute("data-tidio", "true");
+  document.body.appendChild(script);
+}
+
+function openTidio() {
+  if (window.tidioChatApi) {
+    window.tidioChatApi.open();
   }
 }
 
@@ -15,30 +27,47 @@ function showConsentBanner() {
   }
 }
 
-function openTidio() {
-  if (window.tidioChatApi) {
-    window.tidioChatApi.open();
+function hideConsentBanner() {
+  const banner = document.getElementById("consent-banner");
+  if (banner) {
+    banner.hidden = true;
   }
 }
+
+function handleChatClick() {
+  const consentGiven = localStorage.getItem("revalen_chat_consent");
+
+  if (consentGiven === "true") {
+    loadTidio();
+
+    setTimeout(() => {
+      openTidio();
+    }, 1000);
+  } else {
+    showConsentBanner();
+  }
+}
+
 document.getElementById("accept-chat")?.addEventListener("click", function () {
   localStorage.setItem("revalen_chat_consent", "true");
 
-  const script = document.createElement("script");
-  script.src = window.REVALEN_TIDIO_SRC;
-  script.async = true;
-  document.body.appendChild(script);
+  loadTidio();
+  hideConsentBanner();
 
-  document.getElementById("consent-banner").hidden = true;
-
-  // open chat immediately after consent
   setTimeout(() => {
-    if (window.tidioChatApi) {
-      window.tidioChatApi.open();
-    }
+    openTidio();
   }, 1000);
 });
 
 document.getElementById("reject-chat")?.addEventListener("click", function () {
   localStorage.setItem("revalen_chat_consent", "false");
-  document.getElementById("consent-banner").hidden = true;
+  hideConsentBanner();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const consentGiven = localStorage.getItem("revalen_chat_consent");
+
+  if (consentGiven === "true") {
+    loadTidio();
+  }
 });
