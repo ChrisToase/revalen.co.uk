@@ -916,8 +916,8 @@ main {
 
 .ll-banner {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) auto;
-  gap: var(--space-5);
+  grid-template-columns: minmax(0, 1.5fr) auto;
+  gap: var(--space-6);
   align-items: center;
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -926,19 +926,32 @@ main {
 
 .ll-banner h2 {
   color: #ffffff;
-  max-width: none;
+  max-width: 14ch;
+  margin-bottom: var(--space-3);
 }
 
 .ll-banner p {
   margin-bottom: 0;
-  max-width: 52rem;
+  max-width: 42rem;
+}
+
+.ll-banner__content {
+  min-width: 0;
 }
 
 .ll-banner__actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--space-3);
-  justify-content: flex-start;
+  align-items: stretch;
+  justify-content: center;
+  min-width: 220px;
+}
+
+.ll-banner__actions .btn {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
 }
 
 .ll-banner-primary {
@@ -951,7 +964,8 @@ main {
 
 .ll-banner-primary .btn-primary {
   background: var(--color-accent);
-  border-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  color: #ffffff;
 }
 
 .ll-banner-primary .btn-primary:hover {
@@ -960,17 +974,18 @@ main {
 }
 
 .ll-banner-primary .btn-secondary {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.35);
   background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
 }
 
 .ll-banner-primary .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
 }
 
 .ll-banner-charcoal {
-  background: #2a332f;
+  background: #1f2724;
 }
 
 .ll-banner-charcoal p {
@@ -979,7 +994,8 @@ main {
 
 .ll-banner-charcoal .btn-primary {
   background: var(--color-accent);
-  border-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  color: #ffffff;
 }
 
 .ll-banner-charcoal .btn-primary:hover {
@@ -988,13 +1004,14 @@ main {
 }
 
 .ll-banner-charcoal .btn-secondary {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.35);
   background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
 }
 
 .ll-banner-charcoal .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
 }
 
 /* ===== PAIN INTRO ===== */
@@ -1215,7 +1232,6 @@ main {
 
   .ll-banner {
     grid-template-columns: 1fr;
-    text-align: left;
   }
 }
 
@@ -1226,7 +1242,7 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .ll-banner {
-    align-items: start;
+  .ll-banner__actions {
+    min-width: 0;
   }
 }
