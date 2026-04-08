@@ -845,7 +845,7 @@ main {
 }
 
 .ll-section-muted {
-  background: #f4f6f3;
+  background: #d0ccbe;
 }
 
 .ll-audience-banner-section {
@@ -1094,9 +1094,9 @@ main {
 }
 
 .ll-icon {
-  width: 2rem;
-  height: 2rem;
-  margin-bottom: var(--space-3);
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.75rem;
   color: currentColor;
 }
 
