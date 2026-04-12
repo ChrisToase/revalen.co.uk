@@ -3,55 +3,359 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Title</title>
+  <title>Special Investigations | Revalen</title>
+  <meta name="description" content="Experienced, multi-disciplinary investigation teams ready to support or run your chosen project.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="special-investigations-page">
 
-  <header class="header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo">Revalen</a>
+<header class="header">
+  <div class="container nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/brand/revalen-logo.svg" alt="Revalen" class="logo-image">
+    </a>
 
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="intelligence.html">Intelligence</a>
-        <a href="tech.html">Tech</a>
-        <a href="resources.html">Resources</a>
+    <nav class="nav-links">
+      <a href="intelligence.html">Intelligence</a>
+      <a href="tech.html">Tech</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="home-intro page-intro si-hero">
+    <div class="container">
+      <div class="intro-block">
+        <h1>Promoting justice and equality in the most challenging environments</h1>
+        <p class="intro-subhead">
+          Experienced, multi-disciplinary investigation teams ready to support or run your chosen project.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block si-banner-section">
+    <div class="container">
+      <div class="si-banner si-banner-primary">
+        <div class="si-banner__content">
+          <h2>Need investigation support?</h2>
+          <p>Book a call to discuss your project, or start a chat if you have a question.</p>
+        </div>
+        <div class="si-banner__actions">
+          <a href="contact.html" class="btn btn-primary">Book a call</a>
+          <button class="btn btn-secondary" onclick="handleChatClick()">Start chat</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block si-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Who it is for</h2>
+      </div>
+
+      <div class="si-audience-block">
+        <p class="si-audience-line">
+          Teams conducting investigations in complex or hostile environments.
+        </p>
+
+        <ul class="si-audience-list">
+          <li>Legal teams</li>
+          <li>NGOs</li>
+          <li>Journalists</li>
+          <li>Government-funded projects</li>
+          <li>Capacity development programmes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block si-section-muted">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What this service is</h2>
+      </div>
+
+      <div class="si-copy-block">
+        <p>
+          Investigations are, by their nature, reliant on discovery. Every investigation therefore carries performance risk — can sufficient evidence be found to support a meaningful assessment or submission?
+        </p>
+        <p>
+          Our investigation teams minimise this risk through built-in decision points, allowing us to pivot at critical stages throughout the investigation.
+        </p>
+        <p>
+          We can provide an entire mission team, or bolster your existing team with capabilities such as:
+        </p>
+      </div>
+
+      <div class="si-capability-chips">
+        <span>Information collection and verification</span>
+        <span>Analysis</span>
+        <span>Technical support</span>
+        <span>Project management</span>
+        <span>Evidence preservation</span>
+        <span>Liaison</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block si-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What it does</h2>
+      </div>
+
+      <div class="si-value-list">
+        <div class="si-value-item">
+          <p>Position your team as the go-to for high-value, high-impact investigations.</p>
+        </div>
+        <div class="si-value-item">
+          <p>Complete complex investigations in weeks or months, not years.</p>
+        </div>
+        <div class="si-value-item">
+          <p>Draw on multiple strands of privileged and open sources, including advanced technology to find unique insights.</p>
+        </div>
+        <div class="si-value-item">
+          <p>Gain trust and confidence from your funders and delivery partners.</p>
+        </div>
+        <div class="si-value-item">
+          <p>Prevent waste and save costs by triaging and adapting to the information environment.</p>
+        </div>
+        <div class="si-value-item">
+          <p>Increase output and credibility quickly without extensive training or infrastructure changes.</p>
+        </div>
+        <div class="si-value-item">
+          <p>Minimise trial and error through proven methodologies and a decision-led approach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block si-banner-section">
+    <div class="container">
+      <div class="si-banner si-banner-secondary">
+        <div class="si-banner__content">
+          <h2>Decision-led investigations</h2>
+          <p>Discovery is uncertain. Your investigation approach should not be. Build in decision points early so time, funding, and effort are used where they matter most.</p>
+        </div>
+        <div class="si-banner__actions">
+          <a href="contact.html" class="btn btn-primary">Discuss your project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block si-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What support looks like</h2>
+      </div>
+
+      <div class="si-process-grid">
+        <div class="si-process-step">
+          <h3>1. Define the mission</h3>
+          <p>Discuss your project and desired outcomes with our team.</p>
+        </div>
+
+        <div class="si-process-step">
+          <h3>2. Select the capabilities</h3>
+          <p>Decide which investigation capabilities you require.</p>
+        </div>
+
+        <div class="si-process-step">
+          <h3>3. Integrate delivery</h3>
+          <p>We integrate a full or partial investigation team into your existing capabilities.</p>
+        </div>
+
+        <div class="si-process-step">
+          <h3>4. Establish continuity</h3>
+          <p>You are assigned a project manager and/or liaison, so you have a dedicated point of contact throughout.</p>
+        </div>
+
+        <div class="si-process-step">
+          <h3>5. Enable collection and access</h3>
+          <p>If required, we facilitate access to specialist data or establish collection assets on your behalf.</p>
+        </div>
+      </div>
+
+      <div class="si-support-grid">
+        <div class="si-support-card">
+          <h3>Legal</h3>
+          <ul>
+            <li>Liaison with beneficiaries and prosecutors</li>
+            <li>Legal analysis and direction</li>
+            <li>Final submissions and commentary</li>
+          </ul>
+        </div>
+
+        <div class="si-support-card">
+          <h3>Technical</h3>
+          <ul>
+            <li>Data acquisition and visualisation</li>
+            <li>Information management and preservation</li>
+            <li>Cyber and communication security</li>
+          </ul>
+        </div>
+
+        <div class="si-support-card">
+          <h3>Operations</h3>
+          <ul>
+            <li>Information collection</li>
+            <li>Analysis</li>
+            <li>Training</li>
+          </ul>
+        </div>
+
+        <div class="si-support-card">
+          <h3>Project Management</h3>
+          <ul>
+            <li>Quality assurance</li>
+            <li>Compliance</li>
+            <li>Measure of effect</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block si-section-muted">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Background and credibility</h2>
+      </div>
+
+      <div class="si-cred-list">
+        <div class="si-cred-list__item">
+          <p>Military intelligence, law enforcement, and NGO backgrounds.</p>
+        </div>
+        <div class="si-cred-list__item">
+          <p>Experience running complex investigations in hostile environments.</p>
+        </div>
+        <div class="si-cred-list__item">
+          <p>Trusted by our delivery partners and beneficiaries.</p>
+        </div>
+        <div class="si-cred-list__item">
+          <p>Strong background in innovation and advanced technology.</p>
+        </div>
+      </div>
+
+      <div class="si-placeholder-note">
+        <p>Placeholder for client feedback and case references.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block si-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Related services</h2>
+      </div>
+
+      <div class="card-grid card-grid-two">
+        <a href="legendary-leaders.html" class="feature-card">
+          <div class="feature-card__content">
+            <p class="feature-card__title">Legendary Leaders</p>
+            <h3>Build intelligence and investigation teams that are secure, consistent, and sustainable.</h3>
+            <span class="text-link">Explore Legendary Leaders</span>
+          </div>
+        </a>
+
+        <a href="planning-delivery.html" class="feature-card">
+          <div class="feature-card__content">
+            <p class="feature-card__title">Planning and Delivery</p>
+            <h3>Decision support and situational awareness for complex operations and strategic projects.</h3>
+            <span class="text-link">Explore Planning and Delivery</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block section-cta">
+    <div class="container">
+      <div class="cta-panel cta-panel-stacked">
+
+        <div class="cta-panel__content">
+          <h2>Get in touch</h2>
+        </div>
+
+        <div class="cta-panel__actions cta-panel__actions-grid">
+
+          <div class="cta-item">
+            <p>Want to discuss an investigation, capability gap, or delivery model?</p>
+            <a href="contact.html" class="btn btn-primary">Book a call</a>
+          </div>
+
+          <div class="cta-item">
+            <p>
+              Have a question? Start a chat.<br>
+              <span class="cta-note">Chat requires consent to enable.</span>
+            </p>
+            <button class="btn btn-primary" onclick="handleChatClick()">Start chat</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container footer-grid">
+    <div class="footer-block footer-brand">
+      <h3>Revalen</h3>
+      <p>Practical intelligence, technology, and support for organisations operating in complex, high-risk, or high-stakes environments.</p>
+    </div>
+
+    <div class="footer-block">
+      <h3>Quick Links</h3>
+      <div class="footer-links">
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-      </nav>
+        <a href="values.html">Values &amp; Standards</a>
+        <a href="legal.html">Legal</a>
+      </div>
     </div>
-  </header>
 
-  <main class="container">
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-
-      <div>
-        <h3>Revalen</h3>
-        <p>Delivering clarity and capability in complex environments.</p>
-      </div>
-
-      <div>
-        <h3>Navigation</h3>
-        <p><a href="intelligence.html">Intelligence</a></p>
-        <p><a href="tech.html">Tech</a></p>
-        <p><a href="resources.html">Resources</a></p>
-        <p><a href="about.html">About</a></p>
-      </div>
-
-      <div>
-        <h3>More</h3>
-        <p><a href="values.html">Values & Standards</a></p>
-        <p><a href="contact.html">Contact</a></p>
-      </div>
-
+    <div class="footer-block footer-company">
+      <h3>Company</h3>
+      <p>Revalen Group Ltd</p>
+      <p class="small-text">Registered in the United Kingdom</p>
+      <p class="small-text">Company No. 16417753</p>
+      <p class="small-text">© 2026 Revalen Group Ltd. All rights reserved.</p>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/js/site.js"></script>
+<div class="consent-banner" id="consent-banner" hidden>
+  <div class="consent-banner__content">
+    <p>
+      We can enable live chat so you can message us directly. This uses Tidio, which may store small pieces of information in your browser to make the chat work properly and allow us to respond.
+    </p>
+
+    <p class="consent-note">
+      You can enable chat or continue without it.
+    </p>
+
+    <div class="consent-banner__actions">
+      <button type="button" class="btn btn-primary" id="accept-chat">Enable chat</button>
+      <button type="button" class="btn btn-secondary" id="reject-chat">Continue without chat</button>
+      <a href="legal.html">Legal</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.REVALEN_TIDIO_SRC = "//code.tidio.co/i71qzd6ga36gmovqwbtwrylu40zktdeu.js";
+</script>
+<script src="assets/js/site.js"></script>
 
 </body>
 </html>
