@@ -1492,6 +1492,9 @@ main {
 .si-process-step p {
   margin-bottom: 0;
 }
+.si-process-list {
+  margin-bottom: var(--space-5);
+}
 
 .si-support-grid {
   display: grid;
@@ -1565,6 +1568,8 @@ main {
 .si-cred-list__item p {
   margin-bottom: 0;
   color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.75;
 }
 
 .si-placeholder-note {
